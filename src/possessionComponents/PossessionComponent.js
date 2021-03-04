@@ -1,6 +1,7 @@
 import React from 'react';
-import PossessionCounter from './possessionComponents/PossessionCounter';
-import './App.css';
+import PossessionCounter from './PossessionCounter';
+import Timer from '../generalComponents/timerComponents/Timer';
+import '../App.css';
 
 const PossessionComponent = ({ title }) => {
 
@@ -8,6 +9,7 @@ const PossessionComponent = ({ title }) => {
       <div className="main-component">
             <h2>{title}</h2>
             <div>
+                  <Timer />
                   <PossessionCounter />
             </div>
       </div>

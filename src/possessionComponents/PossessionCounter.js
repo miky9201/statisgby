@@ -1,10 +1,8 @@
 import React from 'react';
-import Timer from '../Timer';
 
-const PossessionCounter = ({ color, name }) => {
+const PossessionCounter = () => {
     return(
         <div className="mt-30">
-            <Timer />  
         </div>
     )
 }

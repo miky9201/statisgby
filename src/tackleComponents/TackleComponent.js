@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import TackleCounter from './tackleComponents/TackleCounter';
-import StatTackleDisplayer from './tackleComponents/StatTackleDisplayer';
-import './App.css';
+import TackleCounter from './TackleCounter';
+import StatTackleDisplayer from './StatTackleDisplayer';
+import '../App.css';
 
 const TackleComponent = ({ title }) => {
       

@@ -1,6 +1,6 @@
 import React from 'react';
-import TackleComponent from './TackleComponent';
-import PossessionComponent from './PossessionComponent';
+import TackleComponent from './tackleComponents/TackleComponent';
+import PossessionComponent from './possessionComponents/PossessionComponent';
 
 const App = () => {
       return (
