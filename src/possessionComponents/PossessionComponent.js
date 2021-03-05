@@ -6,9 +6,9 @@ import '../App.css';
 const PossessionComponent = ({ title }) => {
 
       return (
-      <div className="main-component">
+      <div className="main-component mt-30 pt-pb-30 pl-pr-10">
             <h2>{title}</h2>
-            <div>
+            <div className="mt-30">
                   <Timer />
                   <PossessionCounter />
             </div>

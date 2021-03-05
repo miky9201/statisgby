@@ -9,7 +9,7 @@ const TackleComponent = ({ title }) => {
       const [missedTackleNb, setMissedTackleNb] = useState(0);
 
       return (
-      <div className="main-component">
+      <div className="main-component mt-30 pt-pb-30 pl-pr-10">
             <h2>{title}</h2>
             <div>
                   <TackleCounter tackleNb={tackleNb} setTackleNb={setTackleNb} color="green" />
@@ -17,7 +17,7 @@ const TackleComponent = ({ title }) => {
             </div>
             <StatTackleDisplayer num1={tackleNb} num2={missedTackleNb} />
       </div>
-      );
+      )
 }
 
 export default TackleComponent;

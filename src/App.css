@@ -1,10 +1,52 @@
+@font-face {
+      font-family: "sunspire";
+      src: url("font/sunspire.ttf") format("truetype"),
+            url("font/sunspire.otf") format("opentype");
+}
+
+* {
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+      font-family: 'Jura', sans-serif;
+      font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+      font-family: "sunspire";
+}
+
 .App, .main-component {
-  text-align: center;
+      text-align: center;
+      
+}
+
+.App {
+      background-color:#111;
+      color: #eee;
+      min-height: 100vh;
+}
+
+.main-component {
+      border: solid 5px #00ABA9;
+      background-color: #eee;
+      color: #111;
+}
+
+.pt-pb-30 {
+      padding-top: 30px;
+      padding-bottom: 30px;
+}
+
+.pl-pr-10 {
+      padding-left: 10px;
+      padding-right: 10px;
 }
 
 .mt-30 {
       margin-top: 30px;
 }
+
 .mt-50 {
       margin-top: 50px;
 }
@@ -31,32 +73,28 @@
 }
 
 .stat-display {
-      background-color: rgb(0, 0, 31);
-      color: rgb(68, 235, 165);
-      border-radius: 3px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      background-color: #111;
+      color: #4AC1C1;
+      border-radius: 5px;
       margin: 20px auto;
-      padding: 0 5px;
-      width: 140px;
+      padding: 10px;
+      width: 80%
     }
 
 .green {
-      background-color: rgb(68, 235, 165);
+      background-color: #00ABA9;
 }
 
 .red {
-      background-color: tomato;
+      background-color: #C85454;
 }
 
 .yellow {
-      background-color: gold;
+      background-color: #FFC900;
 }
 
-.blue {
-      background-color: midnightblue;
+.dark {
+      background-color: #111;
 }
 
 .flex-row-space-around-start {
@@ -64,4 +102,11 @@
       flex-direction: row;
       justify-content: space-around;
       align-items: flex-start;
+}
+
+.flex-column-center-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 }

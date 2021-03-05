@@ -11,14 +11,14 @@ const StatTackleDisplayer = ({num1, num2}) => {
 
       return(
             <div className="mt-50">
-                  <div className="stat-display">
+                  <div className="stat-display flex-column-center-center">
                         <p>
                               {adder(num1, num2)} <br />
                               Total Plaquages !
                         </p>
                   </div>
                   
-                  <div className="stat-display">
+                  <div className="stat-display flex-column-center-center">
                         <p>
                               {rate(num1, num2)} <br />
                               Taux de plaquages réussis !
