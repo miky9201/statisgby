@@ -1,5 +1,4 @@
 import React from 'react';
-import PossessionCounter from './PossessionCounter';
 import Timer from '../generalComponents/timerComponents/Timer';
 import '../App.css';
 
@@ -10,7 +9,6 @@ const PossessionComponent = ({ title }) => {
             <h2>{title}</h2>
             <div className="mt-30">
                   <Timer />
-                  <PossessionCounter />
             </div>
       </div>
       );

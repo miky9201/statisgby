@@ -3,8 +3,8 @@ import DisplayComponent from './Components/DisplayComponent';
 import BtnComponent from './Components/BtnComponent';
 import './Timer.css';
 
-function App() {
-      const [time, setTime] = useState({ms:0, s:0, m:0, h:0});
+function Timer() {
+      const [time, setTime] = useState({ milliseconde : 0, seconde : 0, minute : 0, hour : 0 });
       const [interv, setInterv] = useState();
       const [status, setStatus] = useState(0);
       // Not started = 0
@@ -17,26 +17,35 @@ function App() {
             setInterv(setInterval(run, 10));
       };
 
-      let updatedMs = time.ms, updatedS = time.s, updatedM = time.m, updatedH = time.h;
+      let updatedMs = time.milliseconde, 
+      updatedS = time.seconde, 
+      updatedM = time.minute, 
+      updatedH = time.hour;
 
       const run = () => {
-            if(updatedM === 60){
+            if ( updatedM === 60 ) {
                   updatedH++;
                   updatedM = 0;
             }
 
-            if(updatedS === 60){
+            if ( updatedS === 60 ) {
                   updatedM++;
                   updatedS = 0;
             }
 
-            if(updatedMs === 100){
+            if ( updatedMs === 100 ) {
                   updatedS++;
                   updatedMs = 0;
             }
 
             updatedMs++;
-            return setTime({ms:updatedMs, s:updatedS, m:updatedM, h:updatedH});
+
+            return setTime({ 
+                  milliseconde : updatedMs, 
+                  seconde:updatedS, 
+                  minute:updatedM, 
+                  hour:updatedH
+            });
       };
 
       const stop = () => {
@@ -47,7 +56,12 @@ function App() {
       const reset = () => {
             clearInterval(interv);
             setStatus(0);
-            setTime({ms:0, s:0, m:0, h:0})
+            setTime({ 
+                  milliseconde:0, 
+                  seconde:0, 
+                  minute:0, 
+                  hour:0
+            })
       };
 
       const resume = () => start();
@@ -61,4 +75,4 @@ function App() {
       )   
 }
 
-export default App;
+export default Timer;

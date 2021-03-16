@@ -1,21 +1,44 @@
 import React from 'react';
 
 function DisplayComponent(props) {
-  const h = () => {
-     if(props.time.h === 0){
-       return '';
-     }else {
-       return <span>{(props.time.h >= 10)? props.time.h : "0"+ props.time.h}</span>;
-     }
-  }
-  return (
-    <div>
-       {h()}
-       <span>{(props.time.m >= 10)? props.time.m : "0"+ props.time.m}</span>&nbsp;
-       <span>{(props.time.s >= 10)? props.time.s : "0"+ props.time.s}</span>&nbsp;
-       <span>{(props.time.ms >= 10)? props.time.ms : "0"+ props.time.ms}</span>
-    </div>
-  );
+      const hour = () => {
+            if(props.time.hour === 0){
+                  return '';
+            } else {
+                  return (
+                        <span>
+                              { props.time.hour >= 10 ? 
+                                    props.time.hour 
+                                    : "0"+ props.time.hour
+                              }
+                        </span>
+                  )
+            }
+      }
+
+      return (
+            <div>
+                  {hour()}
+                  <span>
+                        { props.time.minute >= 10 ? 
+                              props.time.minute 
+                              : "0"+ props.time.minute
+                        }
+                  </span>&nbsp;
+                  <span>
+                        { props.time.seconde >= 10 ? 
+                              props.time.seconde 
+                              : "0"+ props.time.seconde
+                        }
+                  </span>&nbsp;
+                  <span>
+                        { props.time.milliseconde >= 10 ? 
+                              props.time.milliseconde 
+                              : "0"+ props.time.milliseconde
+                        }
+                  </span>
+            </div>
+      );
 }
 
 export default DisplayComponent;

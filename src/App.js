@@ -9,7 +9,7 @@ const App = () => {
                   <div className="flex-row-space-around-start">
                         <TackleComponent title="Plaquages" />
                         <PossessionComponent title="Possession" />
-                        {/*<TackleComponent title="Stats Occupation" /> */}
+                        {/* <TackleComponent title="Occupation" /> */}
                   </div>  
             </div>
       )
